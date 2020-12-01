@@ -52,14 +52,14 @@ public class Day01 {
         int num2 = 0;
         int num3 = 0;
 
-        for (int i = 0; i < input.size() - 2; i++) {
+        outer: for (int i = 0; i < input.size() - 2; i++) {
             int match = 2020 - input.get(i);
             for (int j = i + 1; j < input.size(); j++) {
                 if (candidates.contains(match - input.get(j))) {
                     num1 = input.get(i);
                     num2 = input.get(j);
                     num3 = match - input.get(j);
-                    break;
+                    break outer;
                 }
                 candidates.add(input.get(j));
             }
