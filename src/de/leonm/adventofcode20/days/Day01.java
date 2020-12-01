@@ -3,6 +3,7 @@ package de.leonm.adventofcode20.days;
 import de.leonm.adventofcode20.utils.Reader;
 
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.List;
 
 public class Day01 {
@@ -20,33 +21,47 @@ public class Day01 {
 
     }
 
+    /**
+     * Solves part one of Day01
+     * Has a hashset which keeps the inputs
+     * Iterates through input, checks if hashset has an element x where current + x = 2020
+     * if not, adds x to the set
+     * @param input List of integers
+     * @return the product of the two integers adding to 2020
+     */
     public int partOne(List<Integer> input) {
+        HashSet<Integer> candidates = new HashSet<>();
         int num1 = 0;
         int num2 = 0;
+
         for (int i : input) {
-            for (int j : input) {
-                if (i + j == 2020) {
-                    num1 = i;
-                    num2 = j;
-                }
+            int match = 2020 - i;
+            if (candidates.contains(match)) {
+                num1 = i;
+                num2 = match;
+                break;
             }
+            candidates.add(i);
         }
         return num1 * num2;
     }
 
     public int partTwo(List<Integer> input) {
+        HashSet<Integer> candidates = new HashSet<>();
         int num1 = 0;
         int num2 = 0;
         int num3 = 0;
-        for (int i : input) {
-            for (int j : input) {
-                for (int k : input) {
-                    if (i + j +k == 2020) {
-                        num1 = i;
-                        num2 = j;
-                        num3 = k;
-                    }
+
+        for (int i = 0; i < input.size() - 2; i++) {
+            int match = 2020 - input.get(i);
+            for (int j = i + 1; j < input.size(); j++) {
+                if (candidates.contains(match - input.get(j))) {
+                    num1 = input.get(i);
+                    num2 = input.get(j);
+                    num3 = match - input.get(j);
+                    break;
                 }
+                candidates.add(input.get(j));
             }
         }
         return num1 * num2 * num3;
