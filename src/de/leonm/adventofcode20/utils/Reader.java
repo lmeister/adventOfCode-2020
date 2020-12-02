@@ -16,4 +16,8 @@ public class Reader {
     public List<Integer> getIntListFromFile(String path) throws IOException {
         return getStringStreamFromFile(path).map(Integer::parseInt).collect(Collectors.toList());
     }
+
+    public List<String> getStringListFromFile(String path) throws IOException {
+        return getStringStreamFromFile(path).collect(Collectors.toList());
+    }
 }
