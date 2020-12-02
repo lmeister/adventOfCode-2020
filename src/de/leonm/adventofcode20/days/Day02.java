@@ -71,7 +71,7 @@ public class Day02 extends Day{
     /**
      * Takes apart a string via regex for Day02
      * Array has a length of 4
-     * [0] = first number, [1] = second number, [2] the char to look for, [4] the password string
+     * [0] = first number, [1] = second number, [2] the char to look for, [3] the password string
      * These values need to be parsed/casted
      * @param str the string to be split
      * @return the array filled with values as strings
