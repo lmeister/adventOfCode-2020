@@ -6,13 +6,10 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
 
-public class Day01 {
-    Reader reader;
+public class Day01 extends Day{
     List<Integer> input;
 
     public Day01() {
-        reader = new Reader();
-
         try {
             input = reader.getIntListFromFile("src/de/leonm/adventofcode20/input/day01.txt");
         } catch (IOException e) {
@@ -68,7 +65,7 @@ public class Day01 {
     }
 
     public void printSolutions() {
-        System.out.println(partOne(input));
-        System.out.println(partTwo(input));
+        System.out.println("Part one: " + partOne(input));
+        System.out.println("Part two: " + partTwo(input));
     }
 }

@@ -7,13 +7,10 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Day02 {
-    Reader reader;
+public class Day02 extends Day{
     List<String> input;
 
     public Day02() {
-        reader = new Reader();
-
         try {
             input = reader.getStringListFromFile("src/de/leonm/adventofcode20/input/day02.txt");
         } catch (IOException e) {
@@ -25,8 +22,8 @@ public class Day02 {
      * Prints the solutions of the day
      */
     public void printSolutions() {
-        System.out.println(partOne(input));
-        System.out.println(partTwo(input));
+        System.out.println("Part one: " + partOne(input));
+        System.out.println("Part two: " + partTwo(input));
     }
 
     /**
