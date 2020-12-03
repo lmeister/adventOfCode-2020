@@ -59,7 +59,7 @@ public class Day03 extends Day {
 
     @Override
     public void printSolutions() {
-        System.out.println(partOne());
-        System.out.println(partTwo());
+        System.out.println("Part one: " + partOne());
+        System.out.println("Part two: " + partTwo());
     }
 }

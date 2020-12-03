@@ -18,6 +18,6 @@ public class Reader {
     }
 
     public List<String> getStringListFromFile(String path) throws IOException {
-        return getStringStreamFromFile(path).collect(Collectors.toList());
+        return Files.readAllLines(Paths.get(path));
     }
 }
