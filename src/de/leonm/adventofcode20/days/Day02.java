@@ -78,16 +78,16 @@ public class Day02 extends Day{
      */
     public String[] takeStringApart(String str) {
         // TODO This Regex can probably be optimized
-        Pattern pattern = Pattern.compile("(\\d+)-(\\d+)\\s([a-z]):\\s([a-z]+)");
+        Pattern pattern = Pattern.compile("(?<lowerB>\\d+)-(?<upperB>\\d+)\\s(?<char>[a-z]):\\s(?<password>[a-z]+)");
         Matcher matcher;
         String[] output = new String[4];
 
         matcher = pattern.matcher(str);
         if (matcher.find()) {
-            output[0] = matcher.group(1);
-            output[1] = matcher.group(2);
-            output[2] = matcher.group(3);
-            output[3] = matcher.group(4);
+            output[0] = matcher.group("lowerB");
+            output[1] = matcher.group("upperB");
+            output[2] = matcher.group("char");
+            output[3] = matcher.group("password");
         }
         return output;
     }
