@@ -7,7 +7,7 @@ import java.lang.reflect.InvocationTargetException;
 public class Main {
 
     public static void main(String[] args) {
-        for (int i = 1; i <= 3; i++) {
+        for (int i = 1; i <= 4; i++) {
             System.out.println("-------- Day " + i + " --------");
             try {
                 Day day = (Day) Class.forName("de.leonm.adventofcode20.days.Day0" + i).getDeclaredConstructor().newInstance();
