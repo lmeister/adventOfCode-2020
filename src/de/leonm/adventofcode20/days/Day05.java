@@ -19,6 +19,12 @@ public class Day05 extends Day {
         }
     }
 
+    /**
+     * Solves part one of day05
+     * Iterates through all the boardingpasses and retrieves their seat id
+     * will then retrieve the maximum utilizing the streaming api
+     * @return the highest seatId as integer - will return -1 if no max is found
+     */
     public int partOne() {
         /*
          * Some Tests
@@ -29,27 +35,26 @@ public class Day05 extends Day {
         testPass = new BoardingPass("BBFFBBFRLL");
         System.out.println(testPass); // should be 102, 4,
          */
-        return boardingPasses.parallelStream().mapToInt(BoardingPass::getSeatId).max().getAsInt();
+        return boardingPasses.parallelStream().mapToInt(BoardingPass::getSeatId).max().orElse(-1);
     }
 
+    /**
+     * Solves part two of day05
+     * Create a Set of the existing seat ids and iterates through it
+     * checks for every current element curId that curId + 2 exist and curId + 1 do not exist
+     * if the condition holds true, we break the loop and return curId + 1 as our seat id
+     * @return our seatId as integer
+     */
     public int partTwo() {
         int ourSeatID = 0;
-        List<Integer> seatIds = new ArrayList<>();
+        Set<Integer> seatIds = boardingPasses.parallelStream()
+                .map(BoardingPass::getSeatId)
+                .collect(Collectors.toSet());
 
-        for (String bp : input) {
-            BoardingPass boardingPass = new BoardingPass(bp);
-            seatIds.add(boardingPass.getSeatId());
-        }
-
-        Collections.sort(seatIds);
-        int lastId = -1;
-        for (int currentId : seatIds) {
-            if (currentId - lastId == 2) {
-                //System.out.println("CurrentID: " + currentId + ", lastId: " + lastId);
-                ourSeatID = currentId - 1;
+        for (int curId : seatIds) {
+            if (!seatIds.contains(curId + 1) && seatIds.contains(curId + 2)) {
+                ourSeatID = curId + 1;
                 break;
-            } else {
-                lastId = currentId;
             }
         }
         return ourSeatID;
