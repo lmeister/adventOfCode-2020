@@ -6,13 +6,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
+/*
  * Refactoring thoughts:
  * Passport class should only be a DTO, should not have a isValidate() function due to separation of responsibility
  * -> Maybe only create a Map for each Passport and check for existing stuff there?
  * -> Keep Passport class and introduce logic to the constructor so that we validate inputs (not ranges, merely format)
  * Probably change the validation to include more RegEx - This might make it faster, however less flexible (New ranges can't be introduced as easily)
- * Logic in isValidPassport is very ugly due to extensive if-else branches - Should be made neater somehow
+ * Logic in isValidPassport is very ugly due to extensive if-else branches - Should be made neater somehow (Switch case?)
  */
 public class Day04 extends Day {
     List<String> input;
