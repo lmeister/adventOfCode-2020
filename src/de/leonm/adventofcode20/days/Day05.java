@@ -1,19 +1,21 @@
 package de.leonm.adventofcode20.days;
 
 import de.leonm.adventofcode20.utils.BoardingPass;
-import de.leonm.adventofcode20.utils.Passport;
 
 import java.io.IOException;
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Day05 extends Day {
     List<String> input;
+    List<BoardingPass> boardingPasses;
 
     public Day05() {
         try {
             input = reader.getStringListFromFile("src/de/leonm/adventofcode20/input/day05.txt");
+            boardingPasses = new ArrayList<>();
+            for (String bp : input) {
+                boardingPasses.add(new BoardingPass(bp));
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -29,18 +31,7 @@ public class Day05 extends Day {
         testPass = new BoardingPass("BBFFBBFRLL");
         System.out.println(testPass); // should be 102, 4,
          */
-
-        int maxSeatId = 0;
-
-        for (String bp : input) {
-            BoardingPass boardingPass = new BoardingPass(bp);
-            int curSeatID = boardingPass.getSeatId();
-            if (maxSeatId < curSeatID) {
-                maxSeatId = curSeatID;
-            }
-        }
-
-        return maxSeatId;
+        return boardingPasses.parallelStream().mapToInt(BoardingPass::getSeatId).max().getAsInt();
     }
 
     public int partTwo() {
