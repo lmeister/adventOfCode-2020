@@ -1,6 +1,6 @@
 package de.leonm.adventofcode20.days;
 
-import de.leonm.adventofcode20.utils.BoardingPass;
+import de.leonm.adventofcode20.models.BoardingPass;
 
 import java.io.IOException;
 import java.util.*;
@@ -13,7 +13,7 @@ public class Day05 extends Day {
     public Day05() {
         try {
             input = reader.getStringListFromFile("src/de/leonm/adventofcode20/input/day05.txt");
-            boardingPasses = input.parallelStream().map(BoardingPass::new).collect(Collectors.toList());
+            boardingPasses = input.stream().map(BoardingPass::new).collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -35,7 +35,7 @@ public class Day05 extends Day {
         testPass = new BoardingPass("BBFFBBFRLL");
         System.out.println(testPass); // should be 102, 4,
          */
-        return boardingPasses.parallelStream().mapToInt(BoardingPass::getSeatId).max().orElse(-1);
+        return boardingPasses.stream().mapToInt(BoardingPass::getSeatId).max().orElse(-1);
     }
 
     /**
@@ -47,7 +47,7 @@ public class Day05 extends Day {
      */
     public int partTwo() {
         int ourSeatID = 0;
-        Set<Integer> seatIds = boardingPasses.parallelStream()
+        Set<Integer> seatIds = boardingPasses.stream()
                 .map(BoardingPass::getSeatId)
                 .collect(Collectors.toSet());
 

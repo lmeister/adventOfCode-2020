@@ -1,4 +1,4 @@
-package de.leonm.adventofcode20.utils;
+package de.leonm.adventofcode20.models;
 
 import java.util.*;
 import java.util.regex.Matcher;

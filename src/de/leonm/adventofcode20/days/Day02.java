@@ -1,7 +1,5 @@
 package de.leonm.adventofcode20.days;
 
-import de.leonm.adventofcode20.utils.Reader;
-
 import java.io.IOException;
 import java.util.List;
 import java.util.regex.Matcher;

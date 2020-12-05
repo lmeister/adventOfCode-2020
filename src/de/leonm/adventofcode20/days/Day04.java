@@ -1,6 +1,6 @@
 package de.leonm.adventofcode20.days;
 
-import de.leonm.adventofcode20.utils.Passport;
+import de.leonm.adventofcode20.models.Passport;
 
 import java.io.IOException;
 import java.util.ArrayList;
