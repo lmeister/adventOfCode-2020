@@ -4,6 +4,7 @@ import de.leonm.adventofcode20.utils.BoardingPass;
 
 import java.io.IOException;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Day05 extends Day {
     List<String> input;
@@ -12,10 +13,7 @@ public class Day05 extends Day {
     public Day05() {
         try {
             input = reader.getStringListFromFile("src/de/leonm/adventofcode20/input/day05.txt");
-            boardingPasses = new ArrayList<>();
-            for (String bp : input) {
-                boardingPasses.add(new BoardingPass(bp));
-            }
+            boardingPasses = input.parallelStream().map(BoardingPass::new).collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
         }
