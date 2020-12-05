@@ -1,8 +1,11 @@
 package de.leonm.adventofcode20.days;
 
 import de.leonm.adventofcode20.models.BoardingPass;
+import de.leonm.adventofcode20.utils.NanoClock;
 
 import java.io.IOException;
+import java.time.Clock;
+import java.time.Instant;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -35,6 +38,26 @@ public class Day05 extends Day {
         testPass = new BoardingPass("BBFFBBFRLL");
         System.out.println(testPass); // should be 102, 4,
          */
+
+        /*
+         * Test whether parallelstream or normal stream is faster
+         * Not that this is not nearly as accurate as profiling, just a quick glance
+        */
+        /*
+        System.out.println("--Test with normal stream--");
+        final Clock clock = new NanoClock();
+        final Instant instantBegin = Instant.now(clock);
+        System.out.println("Result: " + boardingPasses.stream().mapToInt(BoardingPass::getSeatId).max().orElse(-1));
+        final Instant instantEnd = Instant.now(clock);
+        System.out.println("Difference: " + (instantEnd.getNano() - instantBegin.getNano()) + " nanoseconds");
+
+        System.out.println("--Test with parallel stream--");
+        final Instant instantParBegin = Instant.now(clock);
+        System.out.println("Result: " + boardingPasses.parallelStream().mapToInt(BoardingPass::getSeatId).max().orElse(-1));
+        final Instant instantParEnd = Instant.now(clock);
+        System.out.println("Difference: " + (instantParEnd.getNano() - instantParBegin.getNano()) + " nanoseconds");
+        */
+
         return boardingPasses.stream().mapToInt(BoardingPass::getSeatId).max().orElse(-1);
     }
 
