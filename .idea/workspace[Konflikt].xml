@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ab374e0e-7d90-43b8-b85a-28c3a16f16b9" name="Default Changelist" comment="Add a nanoclock class and some quick timestamps to get a first look at time difference between parallel and normal stream">
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/google-java-format.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aoc2020.iml" beforeDir="false" afterPath="$PROJECT_DIR$/aoc2020.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/leonm/adventofcode20/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/leonm/adventofcode20/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/leonm/adventofcode20/days/Day.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/leonm/adventofcode20/days/Day.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/leonm/adventofcode20/days/Day01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/leonm/adventofcode20/days/Day01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/leonm/adventofcode20/days/Day02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/leonm/adventofcode20/days/Day02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/leonm/adventofcode20/days/Day03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/leonm/adventofcode20/days/Day03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/leonm/adventofcode20/days/Day04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/leonm/adventofcode20/days/Day04.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/leonm/adventofcode20/days/Day05.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/leonm/adventofcode20/days/Day05.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/leonm/adventofcode20/models/BoardingPass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/leonm/adventofcode20/models/BoardingPass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/leonm/adventofcode20/models/Passport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/leonm/adventofcode20/models/Passport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/leonm/adventofcode20/utils/NanoClock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/leonm/adventofcode20/utils/NanoClock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/leonm/adventofcode20/utils/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/leonm/adventofcode20/utils/Reader.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="module-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\Leon\Uni\Privat\Programming\aoc2020\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ksiAZ6VHpuifDzkxhpuLqPLZ6V" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="de.leonm.adventofcode20.models" />
+      <recent name="de.leonm.adventofcode20.utils" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="de.leonm.adventofcode20.Main" />
+      <module name="aoc2020" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab374e0e-7d90-43b8-b85a-28c3a16f16b9" name="Default Changelist" comment="" />
+      <created>1606495556405</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606495556405</updated>
+      <workItem from="1606495559170" duration="919000" />
+      <workItem from="1606578432541" duration="35000" />
+      <workItem from="1606586841571" duration="52000" />
+      <workItem from="1606813128186" duration="2518000" />
+      <workItem from="1606816284556" duration="72000" />
+      <workItem from="1606834452430" duration="1113000" />
+      <workItem from="1606890202756" duration="7335000" />
+      <workItem from="1606912503772" duration="162000" />
+      <workItem from="1606973249675" duration="5391000" />
+      <workItem from="1607065599910" duration="13650000" />
+      <workItem from="1607116274226" duration="50000" />
+      <workItem from="1607163208857" duration="6422000" />
+      <workItem from="1607180767914" duration="652000" />
+      <workItem from="1607188385255" duration="119000" />
+      <workItem from="1607188526590" duration="1632000" />
+    </task>
+    <task id="LOCAL-00001" summary="break out of outer loop as well, thanks to adam">
+      <created>1606816343168</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606816343168</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add day02 solutions">
+      <created>1606892788311</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606892788311</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Make things a little neater">
+      <created>1606896270076</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606896270076</updated>
+    </task>
+    <task id="LOCAL-00004" summary="typo">
+      <created>1606904511323</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606904511323</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Day03 solutions">
+      <created>1606976137219</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606976137219</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Refactor Reader method to stop unnecessary string-&gt;List conversion&#10;Make output neater">
+      <created>1606976615548</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1606976615548</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Make RegEx more legible by adding named capture groups">
+      <created>1606979976214</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606979976214</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add terribly ugly solutions for Day04 - Might refactor later">
+      <created>1607083585762</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607083585762</updated>
+    </task>
+    <task id="LOCAL-00009" summary="increase boundary to 4 in main">
+      <created>1607083672430</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607083672430</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add refactoring thoughts in comment">
+      <created>1607090930707</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607090930707</updated>
+    </task>
+    <task id="LOCAL-00011" summary="First dirty solutions for Day05">
+      <created>1607171464519</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1607171464519</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Refactor partOne day05 to use stream api">
+      <created>1607171581555</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1607171581555</updated>
+    </task>
+    <task id="LOCAL-00013" summary="more stream stuff">
+      <created>1607171674336</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1607171674336</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Use all the streams :D And clean up day05">
+      <created>1607173360462</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1607173360462</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Refactor: move passport and boardingpass to different package, change parallelStreams to streams. Thanks to @jhoppmann">
+      <created>1607174065765</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1607174065765</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Add a nanoclock class and some quick timestamps to get a first look at time difference between parallel and normal stream">
+      <created>1607181359834</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1607181359834</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="break out of outer loop as well, thanks to adam" />
+    <MESSAGE value="Add day02 solutions" />
+    <MESSAGE value="Make things a little neater" />
+    <MESSAGE value="typo" />
+    <MESSAGE value="Day03 solutions" />
+    <MESSAGE value="Refactor Reader method to stop unnecessary string-&gt;List conversion&#10;Make output neater" />
+    <MESSAGE value="Make RegEx more legible by adding named capture groups" />
+    <MESSAGE value="Add terribly ugly solutions for Day04 - Might refactor later" />
+    <MESSAGE value="increase boundary to 4 in main" />
+    <MESSAGE value="Add refactoring thoughts in comment" />
+    <MESSAGE value="First dirty solutions" />
+    <MESSAGE value="First dirty solutions for Day05" />
+    <MESSAGE value="Refactor partOne day05 to use stream api" />
+    <MESSAGE value="more stream stuff" />
+    <MESSAGE value="Use all the streams :D And clean up day05" />
+    <MESSAGE value="Refactor: move passport and boardingpass to different package, change parallelStreams to streams. Thanks to @jhoppmann" />
+    <MESSAGE value="Add a nanoclock class and some quick timestamps to get a first look at time difference between parallel and normal stream" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a nanoclock class and some quick timestamps to get a first look at time difference between parallel and normal stream" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606891327435">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606891327435" />
+    <state x="1165" y="232" key="#com.intellij.ide.util.MemberChooser" timestamp="1607194321210">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1165" y="232" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607194321210" />
+    <state x="1214" y="205" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1607068031896">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1214" y="205" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607068031896" />
+    <state x="840" y="414" width="576" height="241" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1607173977194">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="840" y="414" width="576" height="241" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1607173977194" />
+    <state x="699" y="115" key="CommitChangelistDialog2" timestamp="1607193487124">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="699" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1607193487124" />
+    <state x="851" y="268" key="FileChooserDialogImpl" timestamp="1606586887115">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="851" y="268" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606586887115" />
+    <state x="1297" y="417" key="Github.ShareDialog" timestamp="1606495972490">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1297" y="417" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606495972490" />
+    <state x="1226" y="230" key="Github.UntrackedFilesDialog" timestamp="1606495979872">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1226" y="230" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606495979872" />
+    <state width="938" height="323" key="GridCell.Tab.0.bottom" timestamp="1607187197084">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="323" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607187197084" />
+    <state width="938" height="323" key="GridCell.Tab.0.center" timestamp="1607187197084">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="323" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607187197084" />
+    <state width="938" height="323" key="GridCell.Tab.0.left" timestamp="1607187197083">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="323" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607187197083" />
+    <state width="938" height="323" key="GridCell.Tab.0.right" timestamp="1607187197084">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="323" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607187197084" />
+    <state width="938" height="323" key="GridCell.Tab.1.bottom" timestamp="1607187197084">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="323" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607187197084" />
+    <state width="938" height="323" key="GridCell.Tab.1.center" timestamp="1607187197084">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="323" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607187197084" />
+    <state width="938" height="323" key="GridCell.Tab.1.left" timestamp="1607187197084">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="323" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607187197084" />
+    <state width="938" height="323" key="GridCell.Tab.1.right" timestamp="1607187197084">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="323" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607187197084" />
+    <state x="1055" y="239" key="MultipleFileMergeDialog" timestamp="1607083618863">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1055" y="239" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607083618863" />
+    <state x="520" y="174" width="1225" height="715" key="SettingsEditor" timestamp="1607188503748">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="520" y="174" width="1225" height="715" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607188503748" />
+    <state x="663" y="259" key="Vcs.Push.Dialog.v2" timestamp="1607181361793">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="663" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607181361793" />
+    <state x="749" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607082641612">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="749" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607082641612" />
+    <state x="548" y="254" key="new project wizard" timestamp="1606586891812">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="548" y="254" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1606586891812" />
+    <state x="700" y="247" key="run.anything.popup" timestamp="1607172725961">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="700" y="247" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607172725961" />
+    <state x="1028" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1607172842258">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1028" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607172842258" />
+  </component>
+</project>
