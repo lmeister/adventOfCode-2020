@@ -9,7 +9,6 @@ import java.util.Set;
 
 /*
  * Hasn't been refactored yet.
- * Lots of copied code instead of utilizing methods. :D
  */
 public class Day06 extends Day {
   List<String> input;
@@ -66,24 +65,29 @@ public class Day06 extends Day {
           }
         }
       } else {
-        Set<String> keys = answers.keySet();
-        for (String k : keys) {
-          if (answers.get(k) == personCounter) {
-            result++;
-          }
-        }
+        result += getUnanimousAnswers(answers, personCounter);
         answers.clear();
         personCounter = 0;
       }
     }
+    result += getUnanimousAnswers(answers, personCounter);
+    return result;
+  }
 
-    Set<String> keys = answers.keySet();
-    for (String k : keys) {
-      if (answers.get(k) == personCounter) {
+  /**
+   * Finds the amount of questions where people unanimously voted yes.
+   *
+   * @param answers the map holding all the answers + amount of people
+   * @param groupSize the size of the group
+   * @return returns amount of questions which were unanimously voted yes.
+   */
+  public int getUnanimousAnswers(Map<String, Integer> answers, int groupSize) {
+    int result = 0;
+    for (String key : answers.keySet()) {
+      if (answers.get(key) == groupSize) {
         result++;
       }
     }
-
     return result;
   }
 
