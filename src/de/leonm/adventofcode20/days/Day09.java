@@ -99,8 +99,6 @@ public class Day09 extends Day {
     int endOfSubArray = 0;
     List<BigInteger> result = new ArrayList<>();
 
-    // Gehe durch input
-    for (int i = 0; i < input.size(); i++) {
       // Fülle die subliste so lange die summe der subliste < sum
       while (startOfSubArray < input.size() && endOfSubArray <= input.size()) {
         // Target is reached
@@ -121,7 +119,6 @@ public class Day09 extends Day {
         }
 
       }
-    }
     return result;
   }
 
