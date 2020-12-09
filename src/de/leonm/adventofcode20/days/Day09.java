@@ -23,6 +23,11 @@ public class Day09 extends Day {
     }
   }
 
+  /**
+   * Solves part one of day 9.
+   *
+   * @return
+   */
   public BigInteger partOne() {
     ArrayDeque candidates = new ArrayDeque(numbers.subList(0, 25));
     for (int i = 25; i <= numbers.size(); i++) {
@@ -35,6 +40,11 @@ public class Day09 extends Day {
     return new BigInteger("-1");
   }
 
+  /**
+   * Solves part two of day09.
+   *
+   * @return
+   */
   public BigInteger partTwo() {
     BigInteger sum = partOne();
     List<BigInteger> subList = findSublistAddingToSum(numbers, sum);
@@ -44,6 +54,15 @@ public class Day09 extends Day {
   }
 
 
+  /**
+   * Finds if there is a pair in a list that adds to given sum.
+   *
+   * Will run in linear time due to usage of a set.
+   *
+   * @param input The list that is searched
+   * @param sum the given sum
+   * @return a boolean whether or not there are candidates
+   */
   public boolean findIfSumPossible(Collection<BigInteger> input, BigInteger sum) {
     HashSet<BigInteger> candidates = new HashSet<>();
     BigInteger num1 = new BigInteger("0");
@@ -61,6 +80,19 @@ public class Day09 extends Day {
     return ((num1.add(num2)).compareTo(sum) == 0);
   }
 
+  /**
+   * Finds a sublist of a list adding to a given sum.
+   *
+   * This function uses sort of a sliding window mechanism.
+   * We keep increasing the size of our subList as long as the subList's sum < given Sum.
+   * If the sublistSum > given Sum we will have to remove the first element of our subList.
+   * If the sublistSum < given Sum we will have to add another element to the end of our sublist.
+   * This will only work for positive numbers and will run in linear time.
+   *
+   * @param input The list that we will look for sublist in
+   * @param sum the sum that is to be matched
+   * @return a List of BigIntegers
+   */
   public List<BigInteger> findSublistAddingToSum(List<BigInteger> input, BigInteger sum) {
     BigInteger currentSum = input.get(0);
     int startOfSubArray = 0;
