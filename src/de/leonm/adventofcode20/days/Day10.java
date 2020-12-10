@@ -73,7 +73,7 @@ public class Day10 extends Day {
       return memoizationMap.get(i);
     }
     for (int j = i + 1; j < input.size(); j++) {
-      if ((input.get(j) - input.get(i) <= 3)) {
+      if ((input.get(j) - input.get(i)) <= 3) {
         result += dynamicApproach(j, memoizationMap);
       }
     }
