@@ -1,8 +1,6 @@
 package de.leonm.adventofcode20.models;
 
-import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Deque;
 import java.util.HashSet;
 import java.util.List;
 
@@ -14,7 +12,7 @@ public class HandheldGameConsole {
   private HashSet<Integer> visitedAdresses;
 
 
-  public HandheldGameConsole(Deque input) {
+  public HandheldGameConsole(List input) {
     instructions = new ArrayList<>(input);
     visitedAdresses = new HashSet<>();
   }
@@ -23,10 +21,8 @@ public class HandheldGameConsole {
     instructionPointer = 0;
     do {
       Instruction currentInstruction = instructions.get(instructionPointer);
-      System.out.println("Current Instruction: "
-          + currentInstruction.getInstruction() + " "
-          + currentInstruction.getValue());
       switch (currentInstruction.getInstruction()) {
+
         case "nop":
           visitedAdresses.add(instructionPointer);
           instructionPointer++;
@@ -46,6 +42,7 @@ public class HandheldGameConsole {
           instructionPointer++;
       }
     } while (!visitedAdresses.contains(instructionPointer));
+
     return accumulator;
   }
 

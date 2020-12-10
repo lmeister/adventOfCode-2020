@@ -34,4 +34,12 @@ public class Instruction {
   public void setValue(int value) {
     this.value = value;
   }
+
+  @Override
+  public String toString() {
+    return "Instruction{" +
+        "instruction='" + instruction + '\'' +
+        ", value=" + value +
+        '}';
+  }
 }
