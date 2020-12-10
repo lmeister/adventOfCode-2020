@@ -12,6 +12,10 @@ public class Day10 extends Day {
   List<Integer> input;
 
 
+  /**
+   * Constructor for Day10.
+   *
+   */
   public Day10() {
     try {
       input = reader.getIntListFromFile("src/de/leonm/adventofcode20/input/day10.txt");
@@ -59,6 +63,7 @@ public class Day10 extends Day {
 
   /**
    * Brute forces the solution and uses memoization.
+   *
    * @param i given number
    * @param memoizationMap the map that stores previously calculated results
    * @return long for the given number
