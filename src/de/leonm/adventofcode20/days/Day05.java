@@ -2,8 +2,11 @@ package de.leonm.adventofcode20.days;
 
 import de.leonm.adventofcode20.models.BoardingPass;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.List;
+import java.util.OptionalInt;
 import java.util.Set;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Day05 extends Day {
@@ -30,7 +33,7 @@ public class Day05 extends Day {
    *
    * @return the highest seatId as integer - will return -1 if no max is found
    */
-  public int partOne() {
+  public OptionalInt partOne() {
     /*
      * Some Tests
     BoardingPass testPass = new BoardingPass("BFFFBBFRRR");
@@ -41,7 +44,7 @@ public class Day05 extends Day {
     System.out.println(testPass); // should be 102, 4,
      */
 
-    return boardingPasses.stream().mapToInt(BoardingPass::getSeatId).max().orElse(-1);
+    return boardingPasses.stream().mapToInt(BoardingPass::getSeatId).max();
   }
 
   /**
@@ -52,23 +55,17 @@ public class Day05 extends Day {
    *
    * @return our seatId as integer
    */
-  public int partTwo() {
-    int ourSeatId = 0;
-    Set<Integer> seatIds =
-        boardingPasses.stream().map(BoardingPass::getSeatId).collect(Collectors.toSet());
-
-    for (int curId : seatIds) {
-      if (!seatIds.contains(curId + 1) && seatIds.contains(curId + 2)) {
-        ourSeatId = curId + 1;
-        break;
-      }
-    }
-    return ourSeatId;
+  public OptionalInt partTwo() {
+    Set<Integer> seatIds = boardingPasses.stream().map(BoardingPass::getSeatId).collect(Collectors.toSet());
+    return seatIds.stream()
+      .filter(id -> !seatIds.contains(id + 1) && seatIds.contains(id + 2))
+      .mapToInt(id -> id + 1)
+      .findFirst();
   }
 
   @Override
   public void printSolutions() {
-    System.out.println("Part one: " + partOne());
-    System.out.println("Part two: " + partTwo());
+    partOne().ifPresent(sol -> System.out.printf("Part one: %s" , sol));
+    partTwo().ifPresent(sol -> System.out.printf("Part two: %s" , sol));
   }
 }
