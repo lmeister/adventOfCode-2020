@@ -1,7 +1,6 @@
 package de.leonm.adventofcode20.days;
 
 import java.io.IOException;
-import java.math.BigInteger;
 import java.util.List;
 
 public class Day03 extends Day {
@@ -31,17 +30,17 @@ public class Day03 extends Day {
 
   /**
    * Gives solution for part two .
-   * Uses a BigInteger as int would overflow.
+   * Uses a long as int would overflow.
    *
-   * @return Result as BigInteger
+   * @return Result as long
    */
-  public BigInteger partTwo() {
-    BigInteger result = new BigInteger("1");
-    result = result.multiply(new BigInteger("" + calcTrees(input, 1, 1)));
-    result = result.multiply(new BigInteger("" + calcTrees(input, 3, 1)));
-    result = result.multiply(new BigInteger("" + calcTrees(input, 5, 1)));
-    result = result.multiply(new BigInteger("" + calcTrees(input, 7, 1)));
-    result = result.multiply(new BigInteger("" + calcTrees(input, 1, 2)));
+  public long partTwo() {
+    long result = 1L;
+    result *= calcTrees(input, 1, 1);
+    result *= calcTrees(input, 3, 1);
+    result *= calcTrees(input, 5, 1);
+    result *= calcTrees(input, 7, 1);
+    result *= calcTrees(input, 1, 2);
 
     return result;
   }
