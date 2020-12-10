@@ -2,11 +2,9 @@ package de.leonm.adventofcode20.days;
 
 import de.leonm.adventofcode20.models.BoardingPass;
 import java.io.IOException;
-import java.util.HashSet;
 import java.util.List;
 import java.util.OptionalInt;
 import java.util.Set;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Day05 extends Day {
@@ -31,7 +29,7 @@ public class Day05 extends Day {
    * Iterates through all the boardingpasses and retrieves their seat id,
    * will then retrieve the maximum utilizing the streaming api.
    *
-   * @return the highest seatId as integer - will return -1 if no max is found
+   * @return the highest seatId as integer
    */
   public OptionalInt partOne() {
     /*
@@ -65,7 +63,7 @@ public class Day05 extends Day {
 
   @Override
   public void printSolutions() {
-    partOne().ifPresent(sol -> System.out.printf("Part one: %s" , sol));
-    partTwo().ifPresent(sol -> System.out.printf("Part two: %s" , sol));
+    partOne().ifPresent(solution -> System.out.printf("Part one: %s" , solution));
+    partTwo().ifPresent(solution -> System.out.printf("Part two: %s" , solution));
   }
 }
