@@ -41,6 +41,8 @@ public class Day11 extends Day {
         long occupiedNeighbors = neighbors.stream()
             .filter(Day11::isOccupied)
             .count();
+
+        // dirty fix
         if (input[i][j] == '#') {
           occupiedNeighbors -= 1;
         }
@@ -78,9 +80,7 @@ public class Day11 extends Day {
 
     for (int row = minX; row <= maxX; row++) {
       for (int col = minY; col <= maxY; col++) {
-        //if (row != minX && col != minY) {
         chars.add(matrix[row][col]);
-        //}
       }
     }
     return chars;
