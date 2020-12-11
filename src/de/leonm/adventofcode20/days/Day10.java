@@ -3,10 +3,8 @@ package de.leonm.adventofcode20.days;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class Day10 extends Day {
   List<Integer> input;
@@ -57,8 +55,7 @@ public class Day10 extends Day {
     // need the map for memoization purposes
     // key is the number, value is the result
     Map<Integer, Long> memoizationMap = new HashMap();
-    Long result = dynamicApproach(0, memoizationMap);
-    return result;
+    return dynamicApproach(0, memoizationMap);
   }
 
   /**
