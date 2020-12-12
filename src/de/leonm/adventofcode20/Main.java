@@ -11,7 +11,7 @@ public class Main {
    * @param args Standard program args.
    */
   public static void main(String[] args) {
-    for (int i = 1; i <= 11; i++) {
+    for (int i = 1; i <= 12; i++) {
       String dayNumberCode = String.format("%02d", i);
       System.out.println("-------- Day " + dayNumberCode + " --------");
       try {
