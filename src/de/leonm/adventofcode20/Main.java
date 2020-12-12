@@ -1,7 +1,6 @@
 package de.leonm.adventofcode20;
 
 import de.leonm.adventofcode20.days.Day;
-import java.lang.reflect.InvocationTargetException;
 
 public class Main {
 
@@ -21,12 +20,8 @@ public class Main {
                     .getDeclaredConstructor()
                     .newInstance();
         day.printSolutions();
-      } catch (ClassNotFoundException
-          | NoSuchMethodException
-          | InstantiationException
-          | IllegalAccessException
-          | InvocationTargetException cne) {
-        System.out.println(cne);
+      } catch (ReflectiveOperationException roe) {
+        System.out.println(roe);
       }
     }
   }
